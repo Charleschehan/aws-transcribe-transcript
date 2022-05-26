@@ -3,7 +3,7 @@ def main():
  import json
     import datetime
     import codecs
-    import nltk
+    #import nltk
     #import spacy
     import csv
     #nlp = spacy.load("en_core_web_trf")
@@ -13,7 +13,7 @@ def main():
     nltk.download('stopwords')
     nltk.download('vader_lexicon')
     """
-    from nltk.sentiment.vader import SentimentIntensityAnalyzer
+    #from nltk.sentiment.vader import SentimentIntensityAnalyzer
     #from nltk.corpus import stopwords
     #from nltk.tokenize import word_tokenize
     #sid = SentimentIntensityAnalyzer()
