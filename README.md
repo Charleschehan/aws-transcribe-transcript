@@ -1,7 +1,7 @@
-This is a port of purdy/aws-transcribe-transcript intended to run as an AWS Lambda function
+This is a port of purdy/aws-transcribe-transcript
 
 # aws-transcribe-transcript
-This is a simple utility script to convert the Amazon Transcribe .json transcript into a more readable transcript.
+This is a simple utility script to convert the Amazon Transcribe .json transcript into a more readable transcript in csv and txt file output.
 
 Amazon has a neat Transcription service and you can have the service identify speakers. And in their web interface, they show you a neat play-by-play transcript, but it's limited to the first 5,000 characters. If you want the full transcript, you have to download their JSON file. However, the JSON file only has the transcript as a big block and then some structured data below for the various speakers, start times, and text fragments.
 
@@ -14,6 +14,7 @@ This script creates a transcript that's human-readable.
 3. Results will be written in your current working directory as `[FILENAME]-transcript.txt`
 
 ## S3/Lambda Directions
+if running on AWS Lambda
 0. Probably worth checking your lambda Memory/Execution time settings, depending on the size of the files you'll work with. I like ~256MB and ~15 seconds for general use.
 1. Create an S3 bucket with two folders; input/ and output/
 2. Create a Lambda function that triggers on CreateObject in input/ (Triggers section of the UI)
